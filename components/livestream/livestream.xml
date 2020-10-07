@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--********** Copyright 2016 Roku Corp.  All Rights Reserved. **********-->
+
+<component 
+    name="live_stream" 
+    extends="Group" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:noNamespaceSchemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
+
+<children>
+
+    <Label
+        id="livestream_label"
+        translation="[740, 98]"
+        font="font:LargeBoldSystemFont"
+        color="#222222"
+        text="LIVE STREAM" />
+
+    <Label 
+        id="livestream_now_playing"
+        text="Now Playing"
+        color="#222222"
+        font="font:LargeBoldSystemFont"
+        translation="[855,280]" />    
+
+    <Label
+        id="livestream_artist_name"
+        text="Artist Name"
+        color="#222222"
+        translation="[855,357]" />   
+
+    <Label
+        id="livestream_song_title"
+        text="Song Title"
+        color="#222222"
+        translation="[855,414]" />   
+
+    <Label
+        id="livestream_release_name"
+        text="Release Name"
+        color="#222222"
+        translation="[855,473]" />  
+
+    <Label
+        id="livestream_currently_playing_detail"
+        text="Detail"
+        color="#222222"
+        translation="[855,536]" />  
+
+    <Label
+        id="livestream_currently_playing_notes"
+        wrap="true"
+        width="850"
+        height="200"
+        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+              laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse 
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
+              officia deserunt mollit anim id est laborum"
+        color="#222222"
+        translation="[898,596]" /> 
+
+    <Poster
+        id="livestream_favorite_button"
+        uri="pkg:/images/misc/favorite_logo.png"
+        translation="[1410,794]" 
+        height="80" 
+        width="80" />   
+
+    <Poster
+        id="livestream_poster"
+        uri="pkg:/images/listenlive/live_stream_album_placeholder.png"
+        translation="[77,280]" 
+        height="654" 
+        width="722" />  
+
+    <Poster
+        id="livestream_play_button"
+        uri="pkg:/images/misc/pngegg.png"
+        translation="[1169,794]" 
+        height="150" 
+        width="150" /> 
+    
+    <!-- <Button 
+        id="play_button"
+        iconUri="pkg:/images/misc/play_logo.png"
+        translation="[1169,794]" 
+        height="100" 
+        width="200" /> -->
+
+             
+
+  </children>
+
+    
+    <!-- importing main handler -->
+    <script type="text/brightscript" uri="pkg:/components/livestream/livestream.brs" />
+</component>
