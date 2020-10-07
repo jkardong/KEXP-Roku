@@ -1,4 +1,11 @@
-Simple Roku Scene Graph channel containing an empty scene.
-This can be enhanced with the following features:
-1)      Add grid with video preview (this adds the video grid)
-2)      Add loading indicator component
+# KEXP Roku
+
+## Overview
+This project is a simple testing and development sandbox. There really isn't much to see here. 
+## Installation
+
+If you want to install, you'll need a Roku! Duh. 
+- Download VS Code and install the Brightscript addin
+- Update the Configurations file to point to your Roku
+- Run F5 to build and side load into your Roku
+
