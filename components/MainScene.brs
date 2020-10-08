@@ -41,7 +41,6 @@ sub UIItemSelected()
     playStream = m.content_grid.content.getChild(m.content_grid.itemFocused)
 
     'Play Stream
-    'PlayLiveStream(playStream)
     OpenScreen(playStream)
 
 end sub
