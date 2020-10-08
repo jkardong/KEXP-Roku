@@ -28,8 +28,6 @@ End sub
 'User Selection
 sub setSelection()
     selected = m.content_grid.content.getChild(m.content_grid.itemFocused)
-    ' ? "Selected Content Grid"
-    ' ? selected 
 end sub
 
 sub UIItemSelected()
