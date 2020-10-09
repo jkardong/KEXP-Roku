@@ -14,13 +14,14 @@ sub GetContent()
     xfer.SetURL("https://api.kexp.org/v1/play")
 
     rsp = xfer.GetToString()
-    rootChildren = []
-    rows = {}
-    json = ParseJson(rsp)
-    
-    'm.livestream_artist_name.text = item.artist.name
-    'm.livestream_artist_name.text = "FOO"
+    'rootChildren = []
+    counter = 1
+    playData = {}
 
+    'Get JSON 
+    json = ParseJson(rsp)
+
+    'Parse JSON and Return AA Of Relevant Data
     for each category in json
 
         'Get Each JSON Parent Node
@@ -33,7 +34,7 @@ sub GetContent()
             if category = "results"
                 for each item in value
                     if (item.playtype.playtypeid = 1)
-                        ? "artist name: " + item.artist.name
+                        playData[Str(item.playid)] = item.artist.name
                     end if 
                 end for
             end if
@@ -52,6 +53,8 @@ sub GetContent()
         
     end for
 
+    m.top.playdata = "This Is A Test"
+    m.top.playArray = playData
 
     ' ===========================================================
     ' ' parse the feed and build a tree of ContentNodes to populate the GridView

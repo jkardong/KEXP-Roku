@@ -79,7 +79,6 @@ function loadMainScene()
     m.content_grid.setFocus(true)
 end function
 
-
 'BUTTON SELECTION
 function onKeyEvent(key as String, press as Boolean) as Boolean
     result = false
