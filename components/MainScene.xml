@@ -31,8 +31,8 @@
             visible = "true" />
 
         <Label 
-            id="header_label"
-            translation="[140,213]"
+            id="option_description_text"
+            translation="[90,674]"
             text= "Play Live Stream"
             color="#000000"
         />
