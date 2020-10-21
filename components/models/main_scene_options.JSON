@@ -1,0 +1,24 @@
+{
+    "title": "MAINSCENE",
+    "description": "All Items for the main scene",
+    "items": [
+        {
+            "id": "streamingarchive",
+            "title": "Streaming Archive",
+            "description": "Listen to our two week archive",
+            "thumbnail": "pkg:/images/archive_image.png"
+        },
+        {
+            "id": "livestream",
+            "title": "Live Stream",
+            "description": "Listen to KEXP Live Stream",
+            "thumbnail": "pkg:/images/listen_live_image.png"
+        },
+        {
+            "id": "podcasts",
+            "title": "Podcasts",
+            "description": "Listen to past in-studio performances",
+            "thumbnail": "pkg:/images/podcasts/podcasts_image.png"
+        }
+      ]
+  }

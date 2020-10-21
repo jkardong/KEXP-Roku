@@ -13,3 +13,22 @@ function GetLiveStream(encode)
         return "http://live-aacplus-64.kexp.org/kexp64.aac"
     end if
 end function 
+
+function SetMainSceenText(area)
+
+    'Set Vars
+    return_text = "KEXP Streaming Roku Channel"
+
+    'Decision Tree
+    if(area = "streamingarchive")
+        return_text = "Access the past two weeks of shows you love. Browse by Day, DJ and Show."
+    else if (area = "livestream")
+        return_text = "Listen to KEXP live! Start listening now for all the greatest new upcoming artists. "
+    else if (area = "podcast")
+        return_text = "Selected shows and broadcasts!"
+    end if
+
+    'Return Text
+    return return_text
+
+end function
