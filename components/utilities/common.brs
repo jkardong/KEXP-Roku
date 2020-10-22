@@ -102,7 +102,6 @@ sub SetSceneVisibility(scene)
     if (scene = "livestream")
         ? "Show Live Stream"
         m.content_grid.visible = false
-        m.header_label = m.top.FindNode("header_label")
         m.header_label.visible = false
         m.live_stream.visible = true
     else if (scene = "streamingarchive")
