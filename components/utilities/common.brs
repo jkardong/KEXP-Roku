@@ -20,12 +20,17 @@ sub OpenScreen(obj)
     if(obj.id = "streamingarchive")
 
         ? "********************************************************************"
-        ? "CALL STREAMING ARCHIVE - NOT WORKING"
+        ? "OPEN STREAMING ARCHIVE" 
         ? "********************************************************************"
-        ' m.jsonloadertask = CreateObject("roSGNode","jsonloadertask")
-        ' m.jsonloadertask.control = "run"
+
+        'Show/Hide Scenes
+        SetSceneVisibility(obj.id)
 
     else if (obj.id = "livestream")
+
+        ? "********************************************************************"
+        ? "OPEN LIVE STREAM" 
+        ? "********************************************************************"
 
         'Show/Hide Scenes
         SetSceneVisibility(obj.id)
@@ -102,11 +107,13 @@ sub SetSceneVisibility(scene)
     if (scene = "livestream")
         ? "Show Live Stream"
         m.content_grid.visible = false
-        m.header_label.visible = false
+        'm.header_label.visible = false
         m.live_stream.visible = true
     else if (scene = "streamingarchive")
         ? "Show Streaming Archive"
-        ? "To Do"
+        m.live_stream.visible = false 
+        m.content_grid.visible = false
+        m.streaming_archive.visible = true 
     end if 
 
 end sub

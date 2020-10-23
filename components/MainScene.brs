@@ -11,11 +11,9 @@ sub init()
     ' set global var
     m.content_grid = m.top.FindNode("content_grid")
     m.live_stream = m.top.FindNode("live_stream")
+    m.streaming_archive = m.top.FindNode("streaming_archive")
     m.option_description_text = m.top.FindNode("option_description_text")
     m.audio = createObject("RoSGNode", "Audio")
-
-    'Create Forms
-    'm.live_stream = m.top.FindNode("live_stream")
 
     'observe
     m.content_grid.observeField("itemFocused","setSelection")

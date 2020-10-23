@@ -50,6 +50,10 @@
         <Live_Stream
             id="live_stream"  
             visible="false" /> 
+        
+        <Streaming_Archive
+            id="streaming_archive"
+            visible="false" />
 
     </children>
     

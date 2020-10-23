@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--********** Copyright 2020 KEXP.  All Rights Reserved. **********-->
+
+<component 
+    name="streaming_archive" 
+    extends="Group" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:noNamespaceSchemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
+
+<children>
+    <Label
+        id="testLabel"
+        height="44"
+        width="0"
+        font="font:MediumBoldSystemFont"
+        text = "Application Development Made Easy!"
+        horizAlign = "left"
+        vertAlign = "center"
+        translation="[318,8]" />
+</children>
+
+
+
+    <!-- importing main handler -->
+    <script type="text/brightscript" uri="pkg:/components/streamingarchive/streamingarchive.brs" />
+
+</component>
