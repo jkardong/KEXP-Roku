@@ -13,7 +13,14 @@
         "password": "voss883",
         "rootDir": "${workspaceFolder}",
         "enableDebuggerAutoRecovery": false,
-        "stopDebuggerOnAppExit": false
+        "stopDebuggerOnAppExit": false,
+        "files": [
+            "components/**/*.*",
+            "feed/**/*.*",
+            "source/**/*.*",
+            "manifest",
+            "images/*"
+          ]
     }
     ]
 }

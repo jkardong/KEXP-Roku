@@ -52,14 +52,26 @@ end sub
 'LOAD POSTER GRID
 function loadMainScene()
 
-    ? "================================================"
-    ? "  Load Main Scene Poster "
-
     'Create Content Nodes
     postercontent = createObject("roSGNode","ContentNode")
     node = CreateObject("roSGNode","ContentNode")
     node2 = CreateObject("roSGNode","ContentNode")
     node3 = CreateObject("roSGNode","ContentNode")
+
+    'get main scene nodes from JSON
+    feed = ReadAsciiFile("pkg:/feed/mainscene.json")
+
+    'Load To UI
+    if feed.Len() > 0
+        ? "Main Scene JSON Loaded"
+    end if
+
+
+    
+    ? "================================================"
+    ? "  Load Main Scene Poster "
+
+
 
     'Populate Nodes - TODO - Move to JSON call
     node.id = "streamingarchive"
