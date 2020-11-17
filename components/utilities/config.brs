@@ -22,9 +22,9 @@ function SetMainSceenText(area)
     'Decision Tree
     if(area = "streamingarchive")
         return_text = "Access the past two weeks of shows you love. Browse by Day, DJ and Show."
-    else if (area = "livestream")
+    else if (area = "listenlive")
         return_text = "Listen to KEXP live! Start listening now for all the greatest new upcoming artists. "
-    else if (area = "podcast")
+    else if (area = "podcasts")
         return_text = "Selected shows and broadcasts!"
     end if
 

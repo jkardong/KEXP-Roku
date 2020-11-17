@@ -19,7 +19,7 @@ sub init()
     m.content_grid.observeField("itemFocused","setSelection")
     m.content_grid.observeField("itemSelected","uiitemselected")
     
-    'Set Items
+    'Set Main Scene Menu Items
     loadMainScene()
 
 End sub
@@ -52,48 +52,58 @@ end sub
 'LOAD POSTER GRID
 function loadMainScene()
 
+    ? "================================================"
+    ? "  Load Main Scene Poster "
+    ? "================================================"
+
     'Create Content Nodes
     postercontent = createObject("roSGNode","ContentNode")
-    node = CreateObject("roSGNode","ContentNode")
-    node2 = CreateObject("roSGNode","ContentNode")
-    node3 = CreateObject("roSGNode","ContentNode")
 
-    'get main scene nodes from JSON
+    'get main scene nodes from local JSON
     feed = ReadAsciiFile("pkg:/feed/mainscene.json")
 
     'Load To UI
     if feed.Len() > 0
         ? "Main Scene JSON Loaded"
+
+        'Get Val From JSON
+        json = ParseJson(feed)
+
+        ' Validate JSON
+        if json <> invalid
+            for each item in json
+
+                'Create Poster Node
+                node = CreateObject("roSGNode","ContentNode")
+
+                'Get Value From JSON Array
+                value = json[item]
+
+                'If AssArray Then Load
+                if type(value) = "roArray"
+
+                    'Get AA Values
+                    node_values = value[0]
+
+                    'Populate Nodes
+                    node.id = node_values.id
+                    node.title = node_values.description
+                    node.description = node_values.description
+                    node.HDGRIDPOSTERURL = node_values.posterurl 
+                    node.SHORTDESCRIPTIONLINE1 = node_values.shortDescription1 
+                    node.SHORTDESCRIPTIONLINE2 =  node_values.shortDescription2
+                    postercontent.appendChild(node)
+                    m.content_grid.content=postercontent
+
+                end if 
+            end for
+        end if
     end if
 
-
-    
-    ? "================================================"
-    ? "  Load Main Scene Poster "
-
-
-
-    'Populate Nodes - TODO - Move to JSON call
-    node.id = "streamingarchive"
-    node.title = "Streaming Archive"
-    node.description = "This is a test"
-    node.HDGRIDPOSTERURL = "pkg:/images/archive_image.png"
-    node.SHORTDESCRIPTIONLINE1 = "This is the streaming archive"
-    node.SHORTDESCRIPTIONLINE2 =  "Second Line"
-    postercontent.appendChild(node)
-
-    node2.id = "livestream"
-    node2.title = "Live Stream"
-    node2.description = "This is a test"
-    node2.HDGRIDPOSTERURL = "pkg:/images/listen_live_image.png"
-    node2.SHORTDESCRIPTIONLINE1 = "This is the live stream"
-    node2.SHORTDESCRIPTIONLINE2 = "Second Line"
-    postercontent.appendChild(node2)
-
     'Populate Main Scene Poster Grid
-    m.content_grid.content=postercontent
     m.content_grid.visible=true
     m.content_grid.setFocus(true)
+
 end function
 
 'BUTTON SELECTION

@@ -17,6 +17,9 @@ REM     Hide and show screens
 REM ********************************************************************
 sub OpenScreen(obj)
 
+    ? "BUTTON SELECTION"
+    ? obj.id
+
     if(obj.id = "streamingarchive")
 
         ? "********************************************************************"
@@ -26,7 +29,7 @@ sub OpenScreen(obj)
         'Show/Hide Scenes
         SetSceneVisibility(obj.id)
 
-    else if (obj.id = "livestream")
+    else if (obj.id = "listenlive")
 
         ? "********************************************************************"
         ? "OPEN LIVE STREAM" 
@@ -37,6 +40,12 @@ sub OpenScreen(obj)
 
         'Start The Live Stream On Load
         PlayLiveStream(obj)
+        
+    else if (obj.id = "podcasts")
+
+        ? "********************************************************************"
+        ? "OPEN PODCASTS" 
+        ? "********************************************************************"
 
     end if
 
@@ -53,7 +62,7 @@ sub PlayLiveStream(obj)
     end if 
 
     ' play just the livestream
-    if (obj.id = "livestream")
+    if (obj.id = "listenlive")
 
         'create a content node
         content = CreateObject("roSGNode","ContentNode")
@@ -104,7 +113,7 @@ REM     Screen Visibility
 REM ********************************************************************
 sub SetSceneVisibility(scene)
 
-    if (scene = "livestream")
+    if (scene = "listenlive")
         ? "Show Live Stream"
         m.content_grid.visible = false
         'm.header_label.visible = false
@@ -120,6 +129,6 @@ end sub
 
 sub Foo()
     ' m.livestream_artist_name = m.top.FindNode("livestream_artist_name")
-    ' m.livestream_artist_name.text = "Fuck you"
+    ' m.livestream_artist_name.text = "What The Heck!!"
     ? "What the heck"
 end sub

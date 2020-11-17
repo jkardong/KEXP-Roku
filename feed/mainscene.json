@@ -1,6 +1,16 @@
 {
     "providerName":"KEXP Roku",
     "language":"en-US",
+    "podcasts":[
+        {
+            "id":"podcasts",
+            "title":"Podcasts",
+            "description":"Listen to past performances and show highlights",
+            "shortDescription1":"Podcasts are where it's at",
+            "shortDescription2":"Podcasts are from KEXP",
+            "posterurl":"pkg:/images/podcasts/podcasts_image.png"
+        }
+    ], 
     "archive":[
         {
             "id":"streamingarchive",
@@ -8,7 +18,7 @@
             "description":"This is a test",
             "shortDescription1":"This is the streaming archive",
             "shortDescription2":"Second Line",
-            "poserurl":"pkg:/images/archive_image.png"
+            "posterurl":"pkg:/images/archive_image.png"
         }
     ],
     "listenlive":[
@@ -18,7 +28,7 @@
             "description":"Listen to live shows yo",
             "shortDescription1":"This is the Live Stream",
             "shortDescription2":"Second Line",
-            "poserurl":"pkg:/images/listen_live_image.png"
+            "posterurl":"pkg:/images/listen_live_image.png"
         }
-    ] 
+    ]
 }

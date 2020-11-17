@@ -19,7 +19,7 @@
             "feed/**/*.*",
             "source/**/*.*",
             "manifest",
-            "images/*"
+            "images/**/*.*"
           ]
     }
     ]
