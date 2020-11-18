@@ -4,11 +4,17 @@
 <component name="JSONLoaderTask" extends="Task">
 
   <interface>
+
+    <field id = "content" type = "node" />
+    <field id = "contenturi" type = "uri" />
+    <field id = "foo" type = "string" />
+
+
     <field id = "playdata" type = "string" />
     <field id = "playcontentnode" type = "node" />
     <!-- <field id = "playArray" type = "roAssociativeArray" /> -->
     <field id = "playArray" type = "assocarray" />
-    <field id = "contenturi" type = "uri" />
+    
   </interface>
 
     <script type="text/brightscript" uri="jsonloadertask.brs" />

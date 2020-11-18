@@ -1,26 +1,30 @@
 sub Init()
-    m.top.functionName = "GetContent" 'call API on creation
+    m.top.functionName = "GetKEXPContent" 'call API on creation
 end sub
 
 ' ===========================================================
 ' request the content feed from the API
 ' ===========================================================
-sub GetContent()
+sub GetKEXPContent()
+
+    ? "********************************************************************"
+    ? "Call Live Stream API"
+    ? "********************************************************************"
 
     xfer = CreateObject("roURLTransfer")
     xfer.SetCertificatesFile("common:/certs/ca-bundle.crt")
-
-    'xfer.SetURL("https://jonathanbduval.com/roku/feeds/roku-developers-feed-v1.json")
-    xfer.SetURL("https://api.kexp.org/v1/play")
-
+    xfer.SetURL(m.top.contenturi)
     rsp = xfer.GetToString()
-    'rootChildren = []
-    counter = 1
-    playData = {}
 
     'Get JSON 
     json = ParseJson(rsp)
 
+    'm.top.content = json
+    m.top.foo = "Cougars"
+
+end sub
+
+sub Foo()
     'Parse JSON and Return AA Of Relevant Data
     for each category in json
 
@@ -85,3 +89,26 @@ sub GetContent()
     '     m.top.content = contentNode
     ' end if
 end sub
+
+' REM ********************************************************************
+' REM     Load Live Stream JSON
+' REM ********************************************************************
+' sub LoadLiveStreamJSON()
+
+
+'     ? "********************************************************************"
+'     ? "JAY!!! This has to be a task"
+'     ? "********************************************************************"
+
+'     ' request the content feed from the API
+'     xfer = CreateObject("roURLTransfer")
+'     xfer.SetCertificatesFile("common:/certs/ca-bundle.crt")
+'     'xfer.SetURL("https://jonathanbduval.com/roku/feeds/roku-developers-feed-v1.json")
+'     xfer.SetRL("https://api.kexp.org/v1/play/")
+'     rsp = xfer.GetToString()
+'     rootChildren = []
+'     rows = {}
+
+' end sub 
+
+
