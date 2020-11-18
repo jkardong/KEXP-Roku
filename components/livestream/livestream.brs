@@ -11,6 +11,6 @@ sub pullPlayData()
 
 
 
-	? "FUXCK WIT"
+	? "LiveStream.brs Loaded"
 
 end sub

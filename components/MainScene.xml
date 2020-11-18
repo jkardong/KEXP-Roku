@@ -13,6 +13,7 @@
     <script type="text/brightscript" uri="pkg:/components/utilities/common.brs" />
     <script type="text/brightscript" uri="pkg:/components/utilities/config.brs" />
 
+
     <children>
         
         <Overhang
@@ -31,8 +32,8 @@
             visible = "true" />
 
         <Label 
-            id="header_label"
-            translation="[140,213]"
+            id="option_description_text"
+            translation="[90,674]"
             text= "Play Live Stream"
             color="#000000"
         />
@@ -50,6 +51,10 @@
         <Live_Stream
             id="live_stream"  
             visible="false" /> 
+        
+        <Streaming_Archive
+            id="streaming_archive"
+            visible="false" />
 
     </children>
     
