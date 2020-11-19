@@ -22,7 +22,29 @@ sub GetKEXPContent()
     'm.top.content = json
     m.top.foo = "Cougars"
 
+    'Get Current Play Data
+    GetCurrentPlay(json)
+
 end sub
+
+REM ********************************************************************
+REM ********************************************************************
+REM     Gets and Sets the current play
+REM ********************************************************************
+REM ********************************************************************
+function GetCurrentPlay(obj) as void
+
+    m.currentPlay = { one : 1, two : 2, three : 3 }
+
+    ' if obj <> invalid
+    '     for each value in obj
+    '         m.currentPlay.AddReplace("Bright", "Script")
+    '     end for
+    ' end if
+
+    m.top.jsoncontent = m.currentPlay
+
+end function  
 
 sub Foo()
     'Parse JSON and Return AA Of Relevant Data

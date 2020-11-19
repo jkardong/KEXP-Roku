@@ -1,8 +1,8 @@
-function GetPlayData()
+function GetPlayDataURI()
     return "https://api.kexp.org/v1/play/"
 end function 
 
-function GetShow(show)
+function GetShowURI(show)
     return "https://api.kexp.org/v1/show/"
 end function 
 

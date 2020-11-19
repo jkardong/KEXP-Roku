@@ -62,7 +62,7 @@ sub UIItemSelected()
 end sub
 
 REM ********************************************************************
-REM     Button Selection
+REM     Screen Navigation on Button Press
 REM ********************************************************************
 function onKeyEvent(key as String, press as Boolean) as Boolean
     result = false

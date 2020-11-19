@@ -47,12 +47,9 @@ sub OpenScreen(obj)
         ? "OPEN PODCASTS" 
         ? "********************************************************************"
         m.myObj = createObject("RoSGNode", "JSONLoaderTask")
-        m.myObj.contenturi = "https://api.kexp.org/v1/play"
+        m.myObj.contenturi = GetPlayDataURI()
         m.myObj.observeField("foo", "GetDataFromAPI")
-        
-        'm.myObj.functionName="GetKEXPContent"
         m.myObj.control = "RUN"
-
 
     end if
 
@@ -61,6 +58,11 @@ end sub
 sub GetDataFromAPI()
 
     data = m.myObj.foo 
+    json = m.myObj.jsoncontent
+
+    if json <> invalid
+        ? json.bright 
+    end if
 
     if data <> invalid 
         ? data

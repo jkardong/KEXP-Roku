@@ -8,11 +8,11 @@
     <field id = "content" type = "node" />
     <field id = "contenturi" type = "uri" />
     <field id = "foo" type = "string" />
+    <field id = "jsoncontent" type = "assocarray" />
 
 
     <field id = "playdata" type = "string" />
     <field id = "playcontentnode" type = "node" />
-    <!-- <field id = "playArray" type = "roAssociativeArray" /> -->
     <field id = "playArray" type = "assocarray" />
     
   </interface>
