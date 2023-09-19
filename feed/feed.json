@@ -5,7 +5,7 @@
     "movies":[
         {
             "id":"123456789",
-            "title":"Live Gaming",
+            "title":"Live Gaming!",
             "releaseDate":"2015-06-11",
             "shortDescription":"With the Twitch channel, you can watch the most popular broadcasts of the day, browse live broadcasts by the games you love and follow your favorite Twitch broadcasters.",
             "thumbnail":"https://blog.roku.com/developer/files/2016/10/twitch-poster-artwork.png",
